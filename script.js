@@ -83,6 +83,7 @@ const generateWrestlingGimmick = () => {
 const mainEvent = () => {	
 	const wrestlerFace = generateWrestlingGimmick();
 	const wrestlerHeel = generateWrestlingGimmick();
+	const winner = rng(2) % 2 ? true : false;
 }
 
 mainEvent();
