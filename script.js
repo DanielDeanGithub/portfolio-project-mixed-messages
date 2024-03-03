@@ -56,10 +56,13 @@ const wrestlingDetails = {
 
 const generateWrestlingGimmick = () => {
 	const wrestlingGimmick = [];
-	
+
 	for (const details in wrestlingDetails) {
-		console.log(wrestlingDetails[details]);	
+		// push new random elements to 'wrestlingGimmick' array from the 'details' arrays using rng() with the array lengths as the parameter
+		wrestlingGimmick.push(wrestlingDetails[details][rng(wrestlingDetails[details].length)]);
 	}
+
+	console.log(wrestlingGimmick);
 };
 
 generateWrestlingGimmick();
