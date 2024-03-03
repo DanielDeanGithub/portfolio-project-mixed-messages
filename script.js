@@ -53,3 +53,7 @@ const wrestlingDetails = {
 		"When the Bell Rings, I Spread My Wings!",
 	],
 };
+
+const generateWrestlingGimmick = () => {
+	
+};
