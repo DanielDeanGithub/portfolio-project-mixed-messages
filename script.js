@@ -80,4 +80,8 @@ const generateWrestlingGimmick = () => {
 	return wrestler;
 };
 
-console.log(generateWrestlingGimmick());
+const mainEvent = () => {	
+
+}
+
+mainEvent();
