@@ -62,7 +62,7 @@ const generateWrestlingGimmick = () => {
 		wrestlingGimmick.push(wrestlingDetails[details][rng(wrestlingDetails[details].length)]);
 	}
 
-	console.log(wrestlingGimmick);
+	return wrestlingGimmick;
 };
 
-generateWrestlingGimmick();
+console.log(generateWrestlingGimmick());
