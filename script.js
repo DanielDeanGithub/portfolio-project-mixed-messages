@@ -81,7 +81,8 @@ const generateWrestlingGimmick = () => {
 };
 
 const mainEvent = () => {	
-
+	const wrestlerFace = generateWrestlingGimmick();
+	const wrestlerHeel = generateWrestlingGimmick();
 }
 
 mainEvent();
