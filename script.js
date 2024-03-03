@@ -84,6 +84,24 @@ const mainEvent = () => {
 	const wrestlerFace = generateWrestlingGimmick();
 	const wrestlerHeel = generateWrestlingGimmick();
 	const winner = rng(2) % 2 ? true : false;
-}
+
+	console.log("Welcome to tonight's Main Event!!!");
+	console.log(`It's the evil ${wrestlerHeel['name']} defending their World Heavyweight Title against the hometown hero ${wrestlerFace['name']}.`);
+	console.log(`Let the match begin!`);
+	
+	if (winner) {
+		console.log(`${wrestlerFace['name']} is in trouble as ${wrestlerHeel['name']} goes for their finishing move ${wrestlerHeel['finishingMove']}...`);
+		console.log(`But ${wrestlerFace['name']} escapes at the last second and hits ${wrestlerHeel['name']} with the ${wrestlerFace['finishingMove']}!`);
+		console.log(`1..2..3! ${wrestlerFace['name']} is your new World Heavyweight Champion!!!`);
+		console.log(`Any words from the hometown hero and new World Champ?`);
+		console.log(`"${wrestlerFace['catchphrase']}"`);
+	} else {
+		console.log(`${wrestlerFace['name']} is in full control tonight as they look to finish off ${wrestlerHeel['name']} with their finishing move ${wrestlerHeel['finishingMove']}.`);
+		console.log(`But ${wrestlerHeel['name']} cheats with a cheap eye poke that the referee didn't see! ${wrestlerFace['name']} is in trouble as ${wrestlerHeel['name']} hits their finisher ${wrestlerHeel['finishingMove']}!`);
+		console.log(`1..2..3! ${wrestlerHeel['name']} has stolen the victory and retains their World Heavyweight Champion!!!`);
+		console.log(`Any words from the retaining World Champ infront of this disappointed crowd?`);
+		console.log(`"${wrestlerHeel['catchphrase']}"`);
+	}
+};
 
 mainEvent();
