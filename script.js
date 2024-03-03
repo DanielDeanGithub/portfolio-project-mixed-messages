@@ -1,5 +1,3 @@
-console.log("Hello world!");
-
 const rng = (num) => Math.floor(Math.random() * num);
 
 const wrestlingDetails = {
@@ -55,3 +53,31 @@ const wrestlingDetails = {
 		"When the Bell Rings, I Spread My Wings!",
 	],
 };
+
+const generateWrestlingGimmick = () => {
+	const wrestler = {};
+
+	for (const details in wrestlingDetails) {
+		// stores random elements from 'wrestlingDetails' arrays using rng() with the array lengths as the parameter
+		let temp = wrestlingDetails[details][rng(wrestlingDetails[details].length)];	
+
+		// adds wrestling gimmick information to wrestler object
+		switch(details) {
+			case 'name': 
+				wrestler['name'] = temp;
+				break;
+			case 'finishingMove': 
+				wrestler['finishingMove'] = temp;
+				break;
+			case 'catchphrase': 
+				wrestler['catchphrase'] = temp;
+				break;
+			default:
+				console.log('Error: no valid details provided');
+		}		
+	}
+
+	return wrestler;
+};
+
+console.log(generateWrestlingGimmick());
