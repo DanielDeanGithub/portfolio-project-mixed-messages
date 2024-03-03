@@ -55,14 +55,29 @@ const wrestlingDetails = {
 };
 
 const generateWrestlingGimmick = () => {
-	const wrestlingGimmick = [];
+	const wrestler = {};
 
 	for (const details in wrestlingDetails) {
-		// push new random elements to 'wrestlingGimmick' array from the 'details' arrays using rng() with the array lengths as the parameter
-		wrestlingGimmick.push(wrestlingDetails[details][rng(wrestlingDetails[details].length)]);
+		// stores random elements from 'wrestlingDetails' arrays using rng() with the array lengths as the parameter
+		let temp = wrestlingDetails[details][rng(wrestlingDetails[details].length)];	
+
+		// adds wrestling gimmick information to wrestler object
+		switch(details) {
+			case 'name': 
+				wrestler['name'] = temp;
+				break;
+			case 'finishingMove': 
+				wrestler['finishingMove'] = temp;
+				break;
+			case 'catchphrase': 
+				wrestler['catchphrase'] = temp;
+				break;
+			default:
+				console.log('Error: no valid details provided');
+		}		
 	}
 
-	return wrestlingGimmick;
+	return wrestler;
 };
 
 console.log(generateWrestlingGimmick());
