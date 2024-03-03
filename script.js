@@ -54,6 +54,10 @@ const wrestlingDetails = {
 	],
 };
 
-const generateWrestlingGimmick = () => {
-	
+const generateWrestlingGimmick = () => {		
+	for (const details in wrestlingDetails) {
+		console.log(wrestlingDetails[details]);	
+	}
 };
+
+generateWrestlingGimmick();
